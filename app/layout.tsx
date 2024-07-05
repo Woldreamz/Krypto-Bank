@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "Krypto",
   description:
     "Krypto is a modern banking platform that provides a variety of features that can be used to interact with your financial applications",
+  icons: {
+    icon: "/public/icons/logo.svg",
+  },
 };
 
 export default function RootLayout({
