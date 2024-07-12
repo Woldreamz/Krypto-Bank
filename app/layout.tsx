@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "Krypto is a modern banking platform that provides a variety of features that can be used to interact with your financial applications",
   icons: {
-    icon: "/public/icons/logo.svg",
+    icon: "/public/Rainer.png",
   },
 };
 
@@ -25,8 +25,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link rel="icon" type="image/svg+xml" href="/public/Rainer.png" />
-      <body className={inter.className}>{children}</body>
+      <link
+        rel="icon"
+        type="image/svg+xml"
+        href="https://i.postimg.cc/jSh74M12/Rainer-removebg-preview.png"
+      />
+      <body className={`${inter.variable} ${ibmPlexSerif.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
