@@ -10,9 +10,9 @@ const ibmPlexSerif = IBM_Plex_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Krypto",
+  title: "Rykerstone",
   description:
-    "Krypto is a modern banking platform that provides a variety of features that can be used to interact with your financial applications",
+    "Rykerstone is a modern banking platform that provides a variety of features that can be used to interact with your financial applications",
   icons: {
     icon: "/public/Rainer.png",
   },

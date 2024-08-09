@@ -37,13 +37,13 @@ const MobileNav = ({ user }: MobileNavProps) => {
             className="cursor-pointer flex items-center gap-1 px-4"
           >
             <Image
-              src="/icons/logo.svg"
+              src="/icons/Rainer.png"
               width={34}
               height={34}
-              alt="Horizon logo"
+              alt="Rykerstone logo"
             />
             <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">
-              Horizon
+              Rykerstone
             </h1>
           </Link>
           <div className="mobilenav-sheet">
