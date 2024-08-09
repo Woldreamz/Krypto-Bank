@@ -25,11 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link
-        rel="icon"
-        type="image/svg+xml"
-        href="https://i.postimg.cc/jSh74M12/Rainer-removebg-preview.png"
-      />
+      <link rel="icon" type="image/svg+xml" href="/icons/Rainer.png" />
       <body className={`${inter.variable} ${ibmPlexSerif.variable}`}>
         {children}
       </body>
