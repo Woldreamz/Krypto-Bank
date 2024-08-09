@@ -18,6 +18,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import CustomInput from "./CustomInput";
 
 const formSchema = z.object({
   email: z.string().email(),
@@ -87,6 +88,7 @@ const AuthForm = ({ type }: { type: string }) => {
                           {...field}
                         />
                       </FormControl>
+                      <FormMessage className="form-message mt-2" />
                     </div>
                   </div>
                 )}
@@ -94,6 +96,13 @@ const AuthForm = ({ type }: { type: string }) => {
               <Button type="submit">Submit</Button>
             </form>
           </Form>
+
+          <CustomInput
+            control={form}
+            name="username"
+            label="username"
+            placeholder="Enter your username"
+          />
         </>
       )}
     </section>
