@@ -36,7 +36,7 @@ const AuthForm = ({ type }: { type: string }) => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       email: "",
-      password: "0",
+      password: "",
     },
   });
 
@@ -50,7 +50,7 @@ const AuthForm = ({ type }: { type: string }) => {
       // Sign up with Appwrite & create a new plaid token.
 
       if (type === "sign-up") {
-        const newUser = await signUp(userData);
+        const newUser = await signUp(data);
 
         setUser(newUser);
       }
