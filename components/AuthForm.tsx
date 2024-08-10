@@ -21,6 +21,8 @@ import { Input } from "@/components/ui/input";
 import CustomInput from "./CustomInput";
 import { authFormSchema } from "@/lib/utils";
 import { Loader2 } from "lucide-react";
+import { signUp, signIn } from "@/lib/actions/user.actions";
+import { useRouter } from "next/router";
 
 const AuthForm = ({ type }: { type: string }) => {
   //const router = useRouter();
@@ -39,11 +41,54 @@ const AuthForm = ({ type }: { type: string }) => {
   });
 
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values);
-  }
+    setIsLoading(true);
+
+    try {
+      // Sign up with Appwrite & create a new plaid token.
+
+      if (type === "sign-up") {
+        {
+          /*const userData = {
+          firstName: data.firstName!,
+          lastName: data.lastName!,
+          address1: data.address1!,
+          city: data.city!,
+          state: data.state!,
+          postalCode: data.postalCode!,
+          dateOfBirth: data.dateOfBirth!,
+          ssn: data.ssn!,
+          email: data.email,
+          password: data.password,
+        };*/
+        }
+
+        //const newUser = await signUp(userData);
+
+        //setUser(newUser);
+      }
+
+      if (type === "sign-in") {
+        {
+          /*const response = await signIn({
+          email: data.email,
+          password: data.password,
+        });
+
+        if(response) router.push*/
+        }
+      }
+
+      console.log(values);
+      setIsLoading(false);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <section className="auth-form">
