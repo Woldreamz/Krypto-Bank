@@ -49,6 +49,18 @@ const AuthForm = ({ type }: { type: string }) => {
 
     try {
       // Sign up with Appwrite & create a new plaid token.
+      const userData = {
+        firstName: data.firstName!,
+        lastName: data.lastName!,
+        address1: data.address1!,
+        city: data.city!,
+        state: data.state!,
+        dateOfBirth: data.dateOfBirth!,
+        postalCode: data.postalCode!,
+        ssn: data.ssn!,
+        email: data.email,
+        password: data.password,
+      };
 
       if (type === "sign-up") {
         const newUser = await signUp(data);

@@ -10,7 +10,10 @@ import //createLinkToken,
 //exchangePublicToken,
 "@/lib/actions/user.actions";
 import Image from "next/image";
-import { createLinkToken } from "@/lib/actions/user.actions";
+import {
+  createLinkToken,
+  exchangePublicToken,
+} from "@/lib/actions/user.actions";
 
 const PlaidLink = ({ user, variant }: PlaidLinkProps) => {
   const router = useRouter();
@@ -28,10 +31,10 @@ const PlaidLink = ({ user, variant }: PlaidLinkProps) => {
 
   const onSuccess = useCallback<PlaidLinkOnSuccess>(
     async (public_token: string) => {
-      //await exchangePublicToken({
-      //publicToken: public_token,
-      //user,
-      //});
+      await exchangePublicToken({
+        publicToken: public_token,
+        user,
+      });
 
       router.push("/");
     },
