@@ -1,5 +1,4 @@
-{
-  /*import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import {
   PlaidLinkOnSuccess,
@@ -89,5 +88,3 @@ const PlaidLink = ({ user, variant }: PlaidLinkProps) => {
 };
 
 export default PlaidLink;
-*/
-}
