@@ -30,7 +30,7 @@ const Home = async () => {
       <RightSidebar
         user={loggedIn}
         transactions={[]}
-        banks={[]} // fetch banks and accounts here
+        banks={[{ currentBalance: 150350.45 }, { currentBalance: 150350.45 }]} // fetch banks and accounts here
       />
     </section>
   );
